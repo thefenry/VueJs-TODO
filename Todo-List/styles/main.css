@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: darkblue;
+}
+
+#todoApp {
+  flex: 1;
+  max-width: 45vw;
+  background-color: darkslategray;
+  color: #fff;
+  padding: 25px;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+ul > li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-bottom: 1px solid #000;
+  padding: 5px;
+}
+
+li > button {
+  color: #fff;
+  background-color: red;
+  border: none;
+}
+
+.input-section {
+  display: flex;
+}
+
+.input-section > input[type="text"] {
+  flex: 2;
+}
+
+.input-section > input[type="button"] {
+  color: #fff;
+  background-color: darkcyan;
+  border: none;
+}

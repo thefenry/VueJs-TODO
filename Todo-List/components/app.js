@@ -1,6 +1,6 @@
 Vue.component('todo-item', {
   props: ['todo'],
-  template: '<li>{{todo.task}} <button v-on:click="emit(todo.id)">X</button></li>',
+  template: '<li><div class="todo-item">{{todo.task}} </div><button v-on:click="emit(todo.id)">X</button></li>',
   methods: {
 		emit: function(idToRemove) {
 			this.$emit('event_child', idToRemove)

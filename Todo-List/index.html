@@ -9,19 +9,23 @@
 
   <body>
     <div id="todoApp">
-      <todo-item
-        v-for="item in todoList"
-        v-bind:todo="item"
-        v-bind:key="item.id"
-        v-on:event_child="eventChild"
-      >
-      </todo-item>
-
-      <input type="text" v-model="newItem"/>
-      <input type="button" v-on:click="addToList" value="Add Item"/>
+      <h1>Let's get Todoing &trade;</h1>
+      <ul class="todo-list">
+        <todo-item
+          v-for="item in todoList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+          v-on:event_child="eventChild"
+        >
+        </todo-item>
+      </ul>
+      <section class="input-section">
+        <input type="text" v-model="newItem" />
+        <input type="button" v-on:click="addToList" value="Add Item" />
+      </section>
     </div>
-   
 
     <script src="components/app.js"></script>
+    <link rel="stylesheet" href="styles/main.css" />
   </body>
 </html>
