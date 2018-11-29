@@ -15,7 +15,11 @@
         v-bind:key="item.id"
       >
       </todo-item>
+
+      <input type="text" v-model="newItem"/>
+      <input type="button" v-on:click="addToList" value="Add Item"/>
     </div>
+   
 
     <script src="components/app.js"></script>
   </body>
