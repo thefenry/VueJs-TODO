@@ -13,6 +13,7 @@
         v-for="item in todoList"
         v-bind:todo="item"
         v-bind:key="item.id"
+        v-on:event_child="eventChild"
       >
       </todo-item>
 

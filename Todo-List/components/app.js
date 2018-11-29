@@ -1,6 +1,11 @@
 Vue.component('todo-item', {
   props: ['todo'],
-  template: '<li>{{todo.task}}</li>'
+  template: '<li>{{todo.task}} <button v-on:click="emit(todo.id)">X</button></li>',
+  methods: {
+		emit: function(idToRemove) {
+			this.$emit('event_child', idToRemove)
+		}
+	}
 });
 
 var todoApp = new Vue({
@@ -21,6 +26,13 @@ var todoApp = new Vue({
       
       this.todoList.push({id: newId, task: this.newItem});
       this.newItem = '';
+    },
+    eventChild: function (idToRemove) {
+      for( var i = 0; i < this.todoList.length-1; i++){ 
+        if ( this.todoList[i].id === idToRemove) {
+          this.todoList.splice(i, 1); 
+        }
+     }
     }
   }
 });
