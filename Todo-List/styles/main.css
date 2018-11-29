@@ -32,10 +32,20 @@ ul > li {
   padding: 5px;
 }
 
-li > button {
+.delete-button {
   color: #fff;
   background-color: red;
   border: none;
+}
+
+.complete-button {
+  color: #fff;
+  background-color: red;
+  border: none;
+}
+
+.complete {
+  text-decoration-line: line-through;
 }
 
 .input-section {

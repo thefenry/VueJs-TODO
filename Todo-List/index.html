@@ -16,6 +16,7 @@
           v-bind:todo="item"
           v-bind:key="item.id"
           v-on:event_child="eventChild"
+          v-on:complete_child ="toggleComplete"
         >
         </todo-item>
       </ul>
